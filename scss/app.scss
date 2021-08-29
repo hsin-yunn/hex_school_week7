@@ -1,0 +1,231 @@
+@import 'reset';
+@import 'mixin';
+@import 'variables';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
+  line-height: 1.5;
+}
+a {
+  display: block;
+  text-decoration: none;
+  color: var(--black);
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-sec {
+  @include bg-img;
+  @include flex_center;
+  width: 100%;
+  height: 958px;
+  .banner-sec__container {
+    max-width: 304px;
+    color: var(--white);
+  }
+}
+.about-sec {
+  @include flex_center;
+  padding: 56px 0;
+  .about-sec__container {
+    text-align: center;
+    color: var(--black);
+    .about-sec__container-img {
+      display: block;
+      margin: 0 auto;
+      max-width: 384px;
+    }
+    .text {
+      max-width: 412px;
+    }
+  }
+}
+.brand-sec {
+  @include flex_center;
+  padding: 56px 0 150px 0;
+  background-color: var(--black);
+  .brand-sec__container {
+    text-align: center;
+    color: var(--white);
+  }
+}
+.img-list {
+  @include flex;
+  @include flex_align;
+  @include flex_justify(space-around);
+  // @include flex_justify(center);
+  flex-wrap: wrap;
+  // margin-left: -12px;
+  // margin-right: -12px;
+  width: 1200px;
+  // width: 1224px;
+  .img-list__item {
+    @include bg-img;
+    margin: 20px 0px;
+    // margin:20px 12px;
+    height: 416px;
+    &.one-item {
+      width: 792px;
+    }
+    &.two-items {
+      width: calc((100% - 24px) / 2);
+      // width: calc((100% - 48px) / 2);
+    }
+  }
+}
+.works-sec {
+  padding: 56px 0 144px 0;
+  .works-sec__container {
+    text-align: center;
+    color: var(--black);
+  }
+}
+.footer-sec {
+  padding: 64px 0;
+  background-color: var(--black);
+  text-align: center;
+  color: var(--white);
+  .footer-sec__text {
+    display: block;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+      color: var(--white);
+      span {
+        transition: all 0.3s;
+        cursor: pointer;
+        &:hover {
+          color: var(--red);
+        }
+      }
+    }
+  }
+}
+.text-list {
+  @include auto_margin_top(28px);
+  .text-list__item {
+    @include flex_center;
+    @include auto_margin_top(28px);
+    .text-list__item-title {
+      @include flex;
+      @include flex_align;
+      @include auto_margin_left(16px);
+      &::before {
+        @include auto_margin_right(16px);
+        content: '';
+        display: block;
+        width: 22px;
+        height: 22px;
+        border-radius: 50%;
+        background-color: var(--red);
+      }
+    }
+  }
+}
+.icon-list {
+  @include flex_center;
+  .icon-list__icon {
+    @include auto_margin_left(16px);
+    max-width: 60px;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+.line {
+  margin: 0 auto;
+  width: 384px;
+  height: 1px;
+  background-color: var(--black);
+}
+.img-card-list {
+  @include flex;
+  @include flex_justify(space-between);
+  @include auto_margin_top(32px);
+  flex-wrap: wrap;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+  .img-card-list__item {
+    text-align: center;
+    margin: 24px 0px;
+    transition: all 0.3s;
+    &.two-items {
+      max-width: calc((100% - 24px) / 2);
+    }
+    &.three-items {
+      max-width: calc((100% - 48px) / 3);
+    }
+    .img-card-list__item-img {
+      display: block;
+      max-width: 100%;
+      transition: all 0.3s;
+    }
+    .img-card-list__item-text {
+      @include auto_margin_left(16px);
+      transition: all 0.3s;
+    }
+    &:hover {
+      .img-card-list__item-img {
+        opacity: 0.7;
+      }
+      .img-card-list__item-text {
+        color: var(--red);
+      }
+    }
+  }
+}
+.mt-12 {
+  @include auto_margin_top(48px);
+}
+.mt-10 {
+  @include auto_margin_top(40px);
+}
+.mt-8 {
+  @include auto_margin_top(32px);
+}
+.mt-6 {
+  @include auto_margin_top(24px);
+}
+.mt-5 {
+  @include auto_margin_top(20px);
+}
+.mt-4 {
+  @include auto_margin_top(20px);
+}
+.mt-2 {
+  @include auto_margin_top(8px);
+}
+.mt-1 {
+  @include auto_margin_top(4px);
+}
+.title {
+  font-size: 5rem;
+  font-weight: 900;
+  line-height: 1.5;
+}
+.title-sm {
+  font-size: 4rem;
+  line-height: 2;
+}
+.text {
+  font-size: 1.5rem;
+}
+.text-sm {
+  font-size: 1.25rem;
+}
+.text-sm-2 {
+  font-size: 1.25rem;
+  line-height: 2.1;
+}
+.subtitle {
+  font-size: 1.5rem;
+  line-height: 1.75;
+}
+.bold {
+  font-weight: bold;
+}
