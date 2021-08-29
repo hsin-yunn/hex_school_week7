@@ -105,7 +105,7 @@ img {
   }
 }
 .text-list {
-  @include auto_margin_top(28px);
+  border-top: 1px solid var(--black);
   .text-list__item {
     @include flex_center;
     @include auto_margin_top(28px);
@@ -228,4 +228,8 @@ img {
 }
 .bold {
   font-weight: bold;
+}
+
+.pt-28{
+  padding-top: 28px;
 }
